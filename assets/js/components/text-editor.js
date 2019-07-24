@@ -41,6 +41,9 @@ KB.component('text-editor', function (containerElement, options) {
             .attr('class', 'text-editor-toolbar')
             .for('a', [
                 {href: '#', html: '<i class="fa fa-eye fa-fw"></i> ' + options.labelPreview, click: function() { toggleViewMode(); }},
+                {href: '#', html: '<i class="fa fa-fw">H1</i>', click: function() { insertPrependTag('# '); }},
+                {href: '#', html: '<i class="fa fa-fw">H2</i>', click: function() { insertPrependTag('## '); }},
+                {href: '#', html: '<i class="fa fa-fw">H3</i>', click: function() { insertPrependTag('### '); }},
                 {href: '#', html: '<i class="fa fa-bold fa-fw"></i>', click: function() { insertEnclosedTag('**'); }},
                 {href: '#', html: '<i class="fa fa-italic fa-fw"></i>', click: function() { insertEnclosedTag('_'); }},
                 {href: '#', html: '<i class="fa fa-strikethrough fa-fw"></i>', click: function() { insertEnclosedTag('~~'); }},
